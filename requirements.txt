@@ -1,0 +1,6 @@
+pdfplumber==0.11.0
+PyMuPDF==1.24.2
+pydantic==2.8.2
+google-cloud-bigquery==3.25.0
+google-cloud-documentai==2.26.0  # optional, used only if configured
+python-dotenv==1.0.1
