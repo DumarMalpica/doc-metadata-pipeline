@@ -1,0 +1,220 @@
+# =========================
+# Sistema operativo / general
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Trash / temp
+*.swp
+*.swo
+*~ 
+*.tmp
+
+# =========================
+# Archivos de configuración local / secretos
+# =========================
+# Variables de entorno (usar .env.example en repo en vez del real)
+.env
+.env.local
+.env.*.local
+.env.*.secret
+.secrets/
+secret-*.json
+credentials.json
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.pfx
+token
+token.*
+*.passwd
+
+# Docker credentials & local overrides
+.docker/config.json
+docker-compose.override.yml
+docker-compose.*.override.yml
+docker-compose.local.yml
+
+# =========================
+# Python
+# =========================
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenvs / envs
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Type checkers / linters cache
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.isort.cfg
+
+# PEP 582 local packages
+__pypackages__/
+
+# Distribution / installers
+*.egg
+*.whl
+
+# =========================
+# Jupyter / Notebooks
+# =========================
+.ipynb_checkpoints
+# (Si quieres evitar subir notebooks enteros, descomenta la línea siguiente)
+# *.ipynb
+
+# Notebook outputs
+.nbconvert/
+*.nbconvert.ipynb
+
+# =========================
+# Logs, outputs, datos y artefactos
+# =========================
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+cache/
+cache-*/
+*.cache
+outputs/
+reports/
+exports/
+artifacts/
+models/
+model-weights/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Datos sin versionado (por seguridad)
+data/
+data_raw/
+data_processed/
+data/raw/
+data/interim/
+data/processed/
+uploads/
+downloads/
+*.sqlite
+*.db
+*.db-journal
+
+# =========================
+# IDEs / editores
+# =========================
+# VS Code
+.vscode/
+.vscode-test/
+
+# JetBrains / PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# Emacs, Vim
+*~
+*.elc
+tags
+TAGS
+*.sw?
+
+# =========================
+# CI / CD / GitHub Actions
+# =========================
+# GitHub Actions artifacts
+.github/workflows/*.local.yml
+.github/actions/cache/
+*.gha-artifact
+
+# Local CI artifacts
+/.circleci/
+.cicd/
+coverage/
+artifacts/
+reports/
+
+# =========================
+# OS / misc
+# =========================
+# Thumbnails, icons
+Icon?
+._*
+
+# =========================
+# Cloud & SDK credentials (no subir)
+# =========================
+# AWS
+.aws/
+credentials
+*.pem
+# GCP
+.gcloud/
+google-credentials.json
+# Azure
+.azure/
+# Docker login tokens
+docker-login.json
+
+# =========================
+# Neo4j / DB local volumes
+# =========================
+# ignore named volumes or local DB folders used by docker-compose
+neo4j_data/
+neo4j/import/
+neo4j/conf/
+neo4j/plugins/
+# Postgres / mysql local mounts
+postgres_data/
+mysql_data/
+
+# =========================
+# Misc / catch-all
+# =========================
+# backup files
+*.bak
+*.old
+*.orig
+# compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
