@@ -4,3 +4,5 @@ pydantic==2.8.2
 google-cloud-bigquery==3.25.0
 google-cloud-documentai==2.26.0  # optional, used only if configured
 python-dotenv==1.0.1
+google-genai==1.0.0
+

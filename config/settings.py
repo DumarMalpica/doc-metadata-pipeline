@@ -21,5 +21,9 @@ class Settings:
     DOC_AI_LOCATION: str = os.getenv("DOC_AI_LOCATION", "us")
     DOC_AI_PROCESSOR_ID: str = os.getenv("DOC_AI_PROCESSOR_ID", "")
 
+    # Gemini (Step 2)
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")  # or 1.5-pro
+
 
 settings = Settings()

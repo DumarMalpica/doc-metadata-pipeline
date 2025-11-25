@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 from google.cloud import bigquery
 
@@ -26,18 +26,23 @@ def ensure_super_json_table_exists() -> None:
         dataset.location = "US"
         client.create_dataset(dataset, exists_ok=True)
 
-    # Create table if not exists
+    # Try to get table; if it exists, we assume schema is fine and return
     try:
         client.get_table(table_id)
         return
     except Exception:
         pass
 
+    # New table schema:
+    # - doc_id: string
+    # - source_path: string
+    # - filename: string
+    # - super_json: string (JSON serialized)
     schema = [
         bigquery.SchemaField("doc_id", "STRING", mode="REQUIRED"),
         bigquery.SchemaField("source_path", "STRING", mode="REQUIRED"),
         bigquery.SchemaField("filename", "STRING", mode="REQUIRED"),
-        bigquery.SchemaField("super_json", "JSON", mode="REQUIRED"),
+        bigquery.SchemaField("super_json", "STRING", mode="REQUIRED"),
     ]
 
     table = bigquery.Table(table_id, schema=schema)
