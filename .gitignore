@@ -113,7 +113,6 @@ outputs/
 reports/
 exports/
 artifacts/
-models/
 model-weights/
 *.ckpt
 *.pt
